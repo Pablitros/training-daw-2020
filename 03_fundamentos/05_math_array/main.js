@@ -7,13 +7,13 @@
 
 
 function doCalculation(array) {
-    let suma = 0;
+    let sum = 0;
     let biggerElement = array[0];
     let smallerElement = array[0];
     let average = 0;
     for (let i = 0; i < array.length; i++) {
         //Para sumar
-        suma = suma + array[i];
+        sum = sum + array[i];
         //El elemento mas grande
         if (biggerElement < array[i]) {
             biggerElement = [array[i]];
@@ -26,7 +26,7 @@ function doCalculation(array) {
         average = average + array[i];
 
     }
-    console.log(`La SUMA de los elementos es de: ${suma}`);
+    console.log(`La SUMA de los elementos es de: ${sum}`);
     console.log(`El ELEMENTO MAS GRANDE es: ${biggerElement}`)
     console.log(`El ELEMENTO MAS PEQUEÑO es: ${smallerElement}`)
     console.log(`la MEDIA de los elementos es: ${average/array.length}`)
