@@ -31,12 +31,20 @@ assert.strictEqual(abs(0), 0)
 // GetChat();
 
 
-function doSomething(a, b) {
-    console.log('It made something');
-    console.log('The value of a is: ' + a)
-    console.log('The value of b is: ' + b)
-}
+// function doSomething(a, b) {
+//     console.log('It made something');
+//     console.log('The value of a is: ' + a)
+//     console.log('The value of b is: ' + b)
+// }
 
-doSomething();
-doSomething(5);
-doSomething(5, 3);
+// doSomething();
+// doSomething(5);
+// doSomething(5, 3);
+
+
+
+if( 0/5 === 0/-21){
+    console.log('Es lo mismo');
+} else {
+    console.log('No es lo mismo');
+}

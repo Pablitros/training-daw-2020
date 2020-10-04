@@ -3,21 +3,21 @@ const assert = require('assert').strict;
 function toHoursMinutesSeconds(value) {
 
     var hours = Math.floor(value / 3600);
-    console.log(hours);
+    // console.log(hours);
 
     var minutes = Math.floor((value - (hours * 3600)) / 60);
-    minutes;
-    console.log(minutes);
-    if (minutes < 10){
-        if (minutes == 0){
+    // console.log(minutes);
 
+    if (minutes < 10) {
+        if (minutes == 0) {
+            //nothing
         } else {
             minutes = `0${minutes}`;
         }
     }
 
     var seconds = value - ((hours * 3600) + (minutes * 60));
-    console.log(seconds);
+    // console.log(seconds);
 
     return `${hours}:${minutes}:${seconds}`
 }
