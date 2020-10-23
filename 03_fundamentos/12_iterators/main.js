@@ -29,24 +29,38 @@ var pilots = [
   }
 ];
 
-function iterateSimple() {
-}
-function iterateForEach() {
-}
-function mapIds() {
-}
-function rebels() {
-}
-function totalFaction(faction) {
-}
-function avgYears(faction) {
+
+// function mapIds() { return pilots.map(value => value.id); }
+
+// console.log(mapIds());
+
+// function rebels() { pilots.filter(value => value.faction === "Rebels"); }
+
+// console.log(rebels());
+
+function totalFaction(faction) { let pilotos = pilots.filter(value => value.faction == faction).reduce((total, value) => total + value); }
+console.log(totalFaction('Rebels'));
+
+
+totalFaction("Rebels");
+
+function totalFaction(faction) { 
+  return pilots.filter(value => value.faction == faction); 
 }
 
-// use console.log
-iterateSimple()
-iterateForEach()
+console.log(totalFaction("Rebels"));
+
+function avgYears(faction) {
+  let pilotos = pilots.filter(value => value.faction == faction).map(value => value.years); return pilotos.reduce((total, value) => total + value) / pilotos.length;
+}
+
+
+
+
+
+
 try {
-  assert.deepStrictEqual(mapIds(), [2,8,40,66])
+  assert.deepStrictEqual(mapIds(), [2, 8, 40, 66])
   assert.deepStrictEqual(rebels(), [pilots[0], pilots[3]])
 
   assert.deepStrictEqual(totalFaction('Rebels'), 2)
